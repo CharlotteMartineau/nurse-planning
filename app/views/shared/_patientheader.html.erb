@@ -2,7 +2,7 @@
   <%- if controller_name == 'visits' && action_name == 'show'%>
     <div><%= link_to "Visite", visit_path, class: "button_disabled left"%></div>
     <% if @last_visit_done %>
-      <div><%= link_to "Détails", patient_path(@visit.patient, anchor: "anchor-#{@.id}"), class: "button-active right"%></div>
+      <div><%= link_to "Détails", patient_path(@visit.patient, anchor: "anchor-#{@last_visit_done.id}"), class: "button-active right"%></div>
     <% else %>
       <div><%= link_to "Détails", patient_path(@visit.patient), class: "button-active right"%></div>
     <% end %>

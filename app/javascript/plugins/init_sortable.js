@@ -21,6 +21,8 @@ export const initSortable = () => {
   if (list){
     Sortable.create(list, {
       animation: 150,
+      delay: 500,
+      delayOnTouchOnly: true,
       onEnd: (event) => {
         const url = `/visits/${event.item.dataset.id}/move?old=${event.oldIndex}&new=${event.newIndex}`;
         fetchWithToken(url, {
